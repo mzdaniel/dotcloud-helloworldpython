@@ -1,0 +1,32 @@
+===========
+Hello world
+===========
+
+:Author: Daniel Mizyrycki
+:Contact: daniel.mizyrycki@dotcloud.com
+:Revision: 1
+
+
+This is a basic hello world dotcloud application including package
+building and test to exercise buildbot.
+
+
+Dotcloud deployment
+===================
+
+::
+
+  git clone git@github.com:mzdaniel/dotcloud-helloworldpython.git
+  cd dotcloud-helloworldpython
+  dotcloud create helloworld --git   # (and connect directory answering Y)
+  dotcloud push
+
+  # Test the code successfully deployed
+  curl http://helloworld-mdaniel.dotcloud.com
+
+test
+====
+
+::
+
+  python setup.py  nosetests
